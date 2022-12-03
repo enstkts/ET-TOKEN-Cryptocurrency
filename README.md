@@ -5,23 +5,23 @@ Let's break it down line-by-line and understand what is going on:
 
 =>***_pragma solidity ^0.8.0;_***
 
-This line specifies the compiler version of Solidity to be used. ^0.8.0 means any version greater than 0.8.0.
+  This line specifies the compiler version of Solidity to be used. ^0.8.0 means any version greater than 0.8.0.
 
 => **_import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol";_**
 
-This line imports the ERC-20 token standard from OpenZeppelin (OZ). OZ is an Ethereum security company. Among other things, OZ develops reference contracts for popular smart contract standards which are thoroughly tested and secure. Whenever implementing a smart contract which needs to comply with a standard, try to find an OZ reference implementation rather than rewriting the entire standard from scratch.
+  This line imports the ERC-20 token standard from OpenZeppelin (OZ). OZ is an Ethereum security company. Among other things, OZ develops reference contracts for popular smart contract standards which are thoroughly tested and secure. Whenever implementing a smart contract which needs to comply with a standard, try to find an OZ reference implementation rather than rewriting the entire standard from scratch.
 
 => **_contract EnesTektasToken is ERC20 {
 ...
 }_**
 
-This specifies a new contract, named ETToken, in our Solidity file. Also, it says that this contract is an instance of ERC20. ERC20 in this case refers to the standard contract we imported from OpenZeppelin.
+  This specifies a new contract, named ETToken, in our Solidity file. Also, it says that this contract is an instance of ERC20. ERC20 in this case refers to the standard contract we imported from OpenZeppelin.
 
 => **_constructor(string memory \_name, string memory \_symbol) ERC20(\_name, \_symbol) {
 ...
 }_**
 
-Essentially, we created constructor function that is called when the smart contract is first deployed. Within the constructor, we want two arguments from the user - \_name and \_symbol which specify the name and symbol of our cryptocurrency. E.g. name = Bitcoin, symbol = BTC.
+  Essentially, we created constructor function that is called when the smart contract is first deployed. Within the constructor, we want two arguments from the user - \_name and \_symbol which specify the name and symbol of our cryptocurrency. E.g. name = Bitcoin, symbol = BTC.
 
 What happens after it is more interesting. Immediately after specifying the constructor function, we call ERC20(\_name, \_symbol).
 
@@ -31,7 +31,7 @@ Therefore, we are providing \_name and \_symbol variables to our contract, which
 
 => **_\_mint(msg.sender, 100 _ (10**18));\*\*\*
 
-\_mint is an internal function within the ERC20 standard contract, which means that it can only be called by the contract itself. External users cannot call this function.
+  \_mint is an internal function within the ERC20 standard contract, which means that it can only be called by the contract itself. External users cannot call this function.
 
 Since you as the developer want to receive some tokens when you deploy this contract, we call the \_mint function to mint some tokens to msg.sender.
 
