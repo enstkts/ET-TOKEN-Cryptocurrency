@@ -3,7 +3,7 @@ Build your own cryptocurrency using ERC-20 tokens
 
 Let's break it down line-by-line and understand what is going on:
 
-=> ***pragma solidity ^0.8.0;***
+<font color="blue">**_pragma solidity ^0.8.0;_**</font>
 
 This line specifies the compiler version of Solidity to be used. ^0.8.0 means any version greater than 0.8.0.
 
