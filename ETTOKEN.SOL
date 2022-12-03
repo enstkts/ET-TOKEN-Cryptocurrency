@@ -1,0 +1,21 @@
+// SPDX-License-Identifier: MIT 
+// What version of solidity do ı want to use
+// ^0.8.0 any version from 0.8.x
+pragma solidity ^0.8.0;
+
+// Import ERC 20 Contract from OpenZeppelin
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol";
+
+// contract X {...}
+contract EnesTektasToken is ERC20 {
+   
+    // We also want to call constructor present inside ERC 20
+    constructor(string memory _name, string memory _symbol) 
+    ERC20(_name, _symbol)
+    {
+        // Get some tokens for ourselves
+        // msg.sender is the person deploying contract
+        _mint(msg.sender, 100 * (10**18));
+
+    }
+}
