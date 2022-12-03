@@ -1,4 +1,4 @@
-# ET-TOKEN-Cryptocurrency
+# ETTOKEN-Cryptocurrency
 Build your own cryptocurrency using ERC-20 tokens
 
 Let's break it down line-by-line and understand what is going on:
