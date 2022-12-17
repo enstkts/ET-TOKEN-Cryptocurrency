@@ -29,7 +29,7 @@ The ERC20 contract we imported from OpenZeppelin has its own constructor, which 
 
 Therefore, we are providing \_name and \_symbol variables to our contract, which we immediately pass on to the ERC20 constructor, thereby initializing the ERC20 smart contract.
 
-=> **_\_mint(msg.sender, 100 _ (10**18));\*\*\*
+=> **_\_mint(msg.sender, 100 _ (10**18));
 
   \_mint is an internal function within the ERC20 standard contract, which means that it can only be called by the contract itself. External users cannot call this function.
 
