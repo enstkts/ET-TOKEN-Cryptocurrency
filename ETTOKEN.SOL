@@ -19,3 +19,4 @@ contract EnesTektasToken is ERC20 {
 
     }
 }
+// Contract Adress=0xA866588A5D85066a12c035fc0Bc4ae4F1f879555
